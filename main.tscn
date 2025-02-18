@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://du0h4xonhvq1x"]
+
+[ext_resource type="Texture2D" uid="uid://c8arnlq67qi7" path="res://assets/textures/grids/Dark/texture_05.png" id="1_sr5f1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rlio0"]
+albedo_texture = ExtResource("1_sr5f1")
+uv1_triplanar = true
+
+[node name="world" type="Node3D"]
+
+[node name="map" type="Node3D" parent="."]
+
+[node name="floor" type="CSGBox3D" parent="map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.568642, 0)
+material_override = SubResource("StandardMaterial3D_rlio0")
+size = Vector3(1000, 1, 1000)
