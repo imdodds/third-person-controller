@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://df2w1gt3nkbvr"]
+[gd_scene load_steps=4 format=3 uid="uid://df2w1gt3nkbvr"]
 
 [ext_resource type="PackedScene" uid="uid://bdq6ajic6fjrf" path="res://assets/models/mixamo_base.glb" id="1_4cwh2"]
+[ext_resource type="Script" path="res://player.gd" id="1_4ugac"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_dk4qx"]
 radius = 0.3
 
 [node name="player" type="CharacterBody3D"]
+script = ExtResource("1_4ugac")
+sens_horizontal = 0.2
+sens_vertical = 0.2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
